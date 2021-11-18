@@ -1,8 +1,12 @@
-def input_strict(type, str):
-    """Input only a certain type"""
+def input_strict(allowed_types, str):
+    """Input only (a) certain type(s)"""
     while True:
-        try:
-            x = type(input(str))
-            return x
-        except Exception:
-            print(f"Please input the type: {type.__name__}")
+        x = input(str)
+        for type in allowed_types:
+            try:
+                x = type(x)
+                return x
+            except Exception:
+                pass
+        print("Please input something castable to one of the following the type(s):\n",
+              ", ".join([type.__name__ for type in allowed_types]))
