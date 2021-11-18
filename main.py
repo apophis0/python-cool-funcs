@@ -11,7 +11,7 @@ def input_strict(allowed_types: list, prompt=None):
 
 def main():
     # Test
-    # input_strict
+    print("Testing: input_strict()")
     for allowed in (int, float, list, bool):
         foo = input_strict([allowed], "Input something castable to " + allowed.__name__ +": ")
         print(foo, "is a valid", allowed.__name__)
