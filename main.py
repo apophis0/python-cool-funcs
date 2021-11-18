@@ -8,5 +8,4 @@ def input_strict(allowed_types, str):
                 return x
             except Exception:
                 pass
-        print("Please input something castable to one of the following:\n",
-              ", ".join([type.__name__ for type in allowed_types]))
+        print("Please input something castable to one of the following:\n", ", ".join([type.__name__ for type in allowed_types]))
