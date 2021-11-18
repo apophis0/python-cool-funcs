@@ -1,3 +1,4 @@
+#hello im oni simp
 def input_strict(allowed_types, str):
     """Input only (a) certain type(s)"""
     while True:
